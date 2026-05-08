@@ -5,6 +5,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Container } from "@/components/Container";
+import { InstagramIcon } from "@/components/InstagramIcon";
+
+const INSTAGRAM_URL = "https://www.instagram.com/boost.educ/";
 
 const nav = [
   { href: "/", label: "Accueil" },
@@ -117,6 +120,22 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={[
+                "inline-flex items-center justify-center rounded-full border p-2 transition-[border-color,background-color,box-shadow] duration-200 ease-out",
+                glassTop
+                  ? "border-white/45 bg-white/[0.08] text-black/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_1px_2px_rgba(0,0,0,0.06)] hover:border-white/60 hover:bg-black/[0.07] hover:text-black hover:shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+                  : "border-black/[0.12] bg-white/60 text-black/75 shadow-[inset_0_1px_0_rgba(255,255,255,0.85),0_1px_2px_rgba(0,0,0,0.05)] hover:border-black/[0.18] hover:bg-zinc-200/85 hover:text-black hover:shadow-[0_2px_8px_rgba(0,0,0,0.07)]",
+              ].join(" ")}
+              aria-label="Instagram (ouvre un nouvel onglet)"
+              title="Instagram"
+            >
+              <InstagramIcon className="size-5" />
+            </a>
+
             <div className="hidden md:inline-flex">
               <ButtonLink href="/contact" variant="primary" size="compact">
                 Me contacter

@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { InstagramIcon } from "@/components/InstagramIcon";
+
+const INSTAGRAM_URL = "https://www.instagram.com/boost.educ/";
 
 export function SiteFooter() {
   return (
@@ -18,6 +21,15 @@ export function SiteFooter() {
             <div className="mt-1 text-sm" style={{ color: "var(--footer-muted)" }}>
               Éducatrice spécialisée — Clermont‑Ferrand (63)
             </div>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-[var(--sage-soft)] transition-colors hover:bg-white/10 hover:text-white"
+            >
+              <InstagramIcon className="size-4" />
+              <span>Instagram : @boost.educ</span>
+            </a>
           </div>
 
           <div className="text-sm" style={{ color: "var(--footer-muted)" }}>
@@ -65,7 +77,7 @@ export function SiteFooter() {
           style={{ color: "var(--footer-faint)" }}
         >
           <div>© {new Date().getFullYear()} Margaux Malhomme — Tous droits réservés.</div>
-          <div className="mt-2 text-[11px] opacity-70">
+          <div className="mt-2 text-center text-[11px] opacity-70">
             Propulsé par Beg&apos;s Project
           </div>
         </div>

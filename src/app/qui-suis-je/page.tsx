@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/Container";
-import { surfaceCard, surfaceCardMist, surfaceCardSage } from "@/lib/surfaceStyles";
+import { InstagramIcon } from "@/components/InstagramIcon";
+import {
+  surfaceCard,
+  surfaceCardBlush,
+  surfaceCardMist,
+  surfaceCardSage,
+} from "@/lib/surfaceStyles";
 
 export const metadata: Metadata = {
   title: "Qui suis‑je ?",
@@ -11,6 +17,7 @@ export const metadata: Metadata = {
 
 /** Déposez votre portrait ici : public/portraits/margaux-malhomme.jpg (photo nette, sans légende fichier). */
 const PORTRAIT_SRC = "/portraits/margaux-malhomme%202.jpg";
+const INSTAGRAM_URL = "https://www.instagram.com/boost.educ/";
 
 export default function QuiSuisJePage() {
   return (
@@ -61,6 +68,27 @@ export default function QuiSuisJePage() {
                     Margaux Malhomme — Éducatrice spécialisée
                   </figcaption>
                 </figure>
+
+                <div className={`mt-6 w-full max-w-[280px] p-5 md:max-w-[320px] ${surfaceCardMist}`}>
+                  <div className="flex items-center justify-center gap-2 font-semibold tracking-tight text-[var(--fg)]">
+                    <InstagramIcon className="size-7 text-[var(--sage)]" />
+                    Instagram
+                  </div>
+                  <p className="mt-2 text-sm leading-7 text-black/70">
+                    Je partage régulièrement des vidéos de conseils et des tips pour
+                    vous aider au quotidien. Cliquez pour les découvrir.
+                  </p>
+                  <div className="mt-3 flex justify-center">
+                    <a
+                      href={INSTAGRAM_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-fit items-center gap-2 rounded-full border border-black/[0.08] bg-white/70 px-4 py-2 text-sm font-semibold text-[var(--sage)] shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-colors hover:bg-white"
+                    >
+                      @boost.educ
+                    </a>
+                  </div>
+                </div>
               </div>
 
               <div className="min-w-0 space-y-6 text-justify hyphens-auto text-base leading-8 text-black/70 md:pt-0.5">
@@ -96,7 +124,7 @@ export default function QuiSuisJePage() {
           </section>
 
           <div className="mt-12 grid gap-4 md:grid-cols-2">
-            <div className={`p-8 ${surfaceCardMist}`}>
+            <div className={`p-8 ${surfaceCardBlush}`}>
               <div className="font-semibold tracking-tight">Mon activité</div>
               <p className="mt-3 text-sm leading-7 text-black/70">
                 En libéral, je propose des temps d’échange, des évaluations et un
