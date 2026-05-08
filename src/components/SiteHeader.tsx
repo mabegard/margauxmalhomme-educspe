@@ -117,14 +117,11 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <ButtonLink
-              href="/contact"
-              variant="primary"
-              size="compact"
-              className="hidden md:inline-flex"
-            >
-              Me contacter
-            </ButtonLink>
+            <div className="hidden md:inline-flex">
+              <ButtonLink href="/contact" variant="primary" size="compact">
+                Me contacter
+              </ButtonLink>
+            </div>
 
             <button
               type="button"

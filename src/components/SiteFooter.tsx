@@ -64,7 +64,10 @@ export function SiteFooter() {
           className="border-t border-white/10 py-6 text-xs"
           style={{ color: "var(--footer-faint)" }}
         >
-          © {new Date().getFullYear()} Margaux Malhomme — Tous droits réservés.
+          <div>© {new Date().getFullYear()} Margaux Malhomme — Tous droits réservés.</div>
+          <div className="mt-2 text-[11px] opacity-70">
+            Propulsé par Beg&apos;s Project
+          </div>
         </div>
       </Container>
     </footer>
