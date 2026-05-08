@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait de Margaux Malhomme</title>
+  <desc id="desc">Visuel de remplacement en attendant une photo professionnelle.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f0e8" />
+      <stop offset="0.55" stop-color="#e9efe9" />
+      <stop offset="1" stop-color="#dfe9ee" />
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1000" rx="56" fill="url(#bg)" />
+  <rect x="32" y="32" width="736" height="936" rx="44" fill="#ffffff" fill-opacity="0.65" />
+
+  <g transform="translate(400 420)">
+    <circle r="130" fill="#2f6b57" fill-opacity="0.10" />
+    <circle r="116" fill="#ffffff" fill-opacity="0.82" />
+    <path d="M-120,252c18-98,104-172,220-172s202,74,220,172" fill="#2f6b57" fill-opacity="0.10" />
+    <path d="M-110,252c18-86,96-150,210-150s192,64,210,150" fill="#ffffff" fill-opacity="0.78" />
+
+    <text
+      x="0"
+      y="20"
+      text-anchor="middle"
+      font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial"
+      font-size="74"
+      font-weight="650"
+      letter-spacing="-1.2"
+      fill="#1f2933"
+      fill-opacity="0.82"
+    >
+      MM
+    </text>
+    <text
+      x="0"
+      y="82"
+      text-anchor="middle"
+      font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial"
+      font-size="20"
+      font-weight="520"
+      fill="#1f2933"
+      fill-opacity="0.55"
+    >
+      Photo à venir
+    </text>
+  </g>
+
+  <rect x="32" y="32" width="736" height="280" rx="44" fill="url(#sheen)" opacity="0.6" />
+</svg>

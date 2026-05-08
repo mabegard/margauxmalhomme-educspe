@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  /* Fond corps : beige / crème chaud (lisible avec les cartes blanches) */
+  --bg: #ebe4d9;
+  --fg: #1f2933; /* ardoise */
+  --card: #ffffff;
+  --muted: #5b6670;
+  --sage: #2f6b57;
+  --sage-soft: #dce8e1;
+  --blush-soft: #f3e3e1;
+  --mist-soft: #dfe9ee;
+  --ring: rgba(47, 107, 87, 0.35);
+  /* Pied de page : même famille que le sauge + ardoise, bien plus sombre que le fond corps */
+  --footer-bg: #172924;
+  --footer-bg-mid: #1f332c;
+  --footer-text: #eef4f1;
+  --footer-muted: rgba(238, 244, 241, 0.72);
+  --footer-faint: rgba(238, 244, 241, 0.45);
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 3px;
+}
