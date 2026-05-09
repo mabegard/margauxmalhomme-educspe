@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { InstagramIcon } from "@/components/InstagramIcon";
+import { LinkedInIcon } from "@/components/LinkedInIcon";
 import {
   surfaceCard,
   surfaceCardBlush,
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 /** Déposez votre portrait ici : public/portraits/margaux-malhomme.jpg (photo nette, sans légende fichier). */
 const PORTRAIT_SRC = "/portraits/margaux-malhomme%202.jpg";
 const INSTAGRAM_URL = "https://www.instagram.com/boost.educ/";
+const LINKEDIN_URL = "https://fr.linkedin.com/in/margaux-malhomme-2548141ba";
 
 export default function QuiSuisJePage() {
   return (
@@ -86,6 +88,26 @@ export default function QuiSuisJePage() {
                       className="inline-flex w-fit items-center gap-2 rounded-full border border-black/[0.08] bg-white/70 px-4 py-2 text-sm font-semibold text-[var(--sage)] shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-colors hover:bg-white"
                     >
                       @boost.educ
+                    </a>
+                  </div>
+                </div>
+
+                <div className={`mt-3 w-full max-w-[280px] p-5 md:max-w-[320px] ${surfaceCardSage}`}>
+                  <div className="flex items-center justify-center gap-2 font-semibold tracking-tight text-[var(--fg)]">
+                    <LinkedInIcon className="size-6 text-[var(--sage)]" />
+                    LinkedIn
+                  </div>
+                  <p className="mt-2 text-sm leading-7 text-black/70">
+                    Mon parcours et mon expérience professionnelle, en toute transparence.
+                  </p>
+                  <div className="mt-3 flex justify-center">
+                    <a
+                      href={LINKEDIN_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-fit items-center gap-2 rounded-full border border-black/[0.10] bg-white/70 px-4 py-2 text-sm font-semibold text-[var(--sage)] shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-colors hover:bg-white"
+                    >
+                      Voir mon profil
                     </a>
                   </div>
                 </div>

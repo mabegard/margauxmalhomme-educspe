@@ -27,6 +27,12 @@ const cards = [
     text: "Mieux comprendre comment votre enfant perçoit et réagit aux stimulations (bruit, lumière, toucher…).",
     tone: "mist",
   },
+  {
+    href: "/bilans/outils",
+    title: "Outils & supports",
+    text: "Une galerie d’illustrations des supports et outils utilisés lors des bilans et de l’accompagnement.",
+    tone: "white",
+  },
 ] as const;
 
 const surfaceByTone = {

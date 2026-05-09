@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { InstagramIcon } from "@/components/InstagramIcon";
+import { LinkedInIcon } from "@/components/LinkedInIcon";
 
 const INSTAGRAM_URL = "https://www.instagram.com/boost.educ/";
+const LINKEDIN_URL = "https://fr.linkedin.com/in/margaux-malhomme-2548141ba";
 
 export function SiteFooter() {
   return (
@@ -29,6 +31,15 @@ export function SiteFooter() {
             >
               <InstagramIcon className="size-4" />
               <span>Instagram : @boost.educ</span>
+            </a>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-[var(--sage-soft)] transition-colors hover:bg-white/10 hover:text-white"
+            >
+              <LinkedInIcon className="size-4" />
+              <span>LinkedIn</span>
             </a>
           </div>
 
