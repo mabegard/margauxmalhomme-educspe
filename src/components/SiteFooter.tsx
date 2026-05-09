@@ -23,24 +23,26 @@ export function SiteFooter() {
             <div className="mt-1 text-sm" style={{ color: "var(--footer-muted)" }}>
               Éducatrice spécialisée — Clermont‑Ferrand (63)
             </div>
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-[var(--sage-soft)] transition-colors hover:bg-white/10 hover:text-white"
-            >
-              <InstagramIcon className="size-4" />
-              <span>Instagram : @boost.educ</span>
-            </a>
-            <a
-              href={LINKEDIN_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-[var(--sage-soft)] transition-colors hover:bg-white/10 hover:text-white"
-            >
-              <LinkedInIcon className="size-4" />
-              <span>LinkedIn</span>
-            </a>
+            <div className="mt-4 flex flex-col items-start gap-2">
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-[var(--sage-soft)] transition-colors hover:bg-white/10 hover:text-white"
+              >
+                <InstagramIcon className="size-4" />
+                <span>Instagram : @boost.educ</span>
+              </a>
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-[var(--sage-soft)] transition-colors hover:bg-white/10 hover:text-white"
+              >
+                <LinkedInIcon className="size-4" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
           </div>
 
           <div className="text-sm" style={{ color: "var(--footer-muted)" }}>
