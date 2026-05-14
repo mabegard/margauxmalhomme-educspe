@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/Container";
-import { surfaceCard, surfaceCardMist } from "@/lib/surfaceStyles";
+import { surfaceCard } from "@/lib/surfaceStyles";
 
 export const metadata: Metadata = {
   title: "Outils & supports",
@@ -11,13 +11,19 @@ export const metadata: Metadata = {
 
 const gallery = [
   { src: "/outils/outil-01.jpg", alt: "Outil 1 (exemple)" },
-  { src: "/outils/outil-02.jpg", alt: "Outil 2 (exemple)" },
+  { src: "/outils/outils%20enfant.png", alt: "Outil 2 (exemple)" },
   { src: "/outils/outil-03.jpg", alt: "Outil 3 (exemple)" },
   { src: "/outils/outil-04.jpg", alt: "Outil 4 (exemple)" },
   { src: "/outils/outil-05.jpg", alt: "Outil 5 (exemple)" },
   { src: "/outils/outil-06.jpg", alt: "Outil 6 (exemple)" },
-  { src: "/outils/outil-07.jpg", alt: "Outil 7 (exemple)" },
-  { src: "/outils/outil-08.jpg", alt: "Outil 8 (exemple)" },
+  {
+    src: "/outils/A402441F-D280-43B9-8143-F01AD24143B1.JPG",
+    alt: "Pictogrammes et supports visuels type PECS (exemple)",
+  },
+  {
+    src: "/outils/IMG_2598.PNG",
+    alt: "Tableau de choix et pictogrammes (exemple)",
+  },
   { src: "/outils/outil-09.jpg", alt: "Outil 9 (exemple)" },
 ] as const;
 

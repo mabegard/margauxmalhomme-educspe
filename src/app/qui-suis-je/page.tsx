@@ -120,11 +120,6 @@ export default function QuiSuisJePage() {
                   notamment dans le champ du neurodéveloppement.
                 </p>
                 <p>
-                  Mon objectif est de faciliter votre parcours en apportant des repères
-                  en amont, une compréhension du fonctionnement de votre enfant et des
-                  pistes concrètes à mettre en place au quotidien.
-                </p>
-                <p>
                   J’ai travaillé plusieurs années en UEMA (Unité d’Enseignement en
                   Maternelle Autisme), dont une expérience particulièrement marquante :
                   la co‑ouverture de la première UEMA du département de la Lozère, au
@@ -135,31 +130,43 @@ export default function QuiSuisJePage() {
                   des enfants.
                 </p>
                 <p>
-                  Depuis maintenant deux ans, j’exerce au sein d’un dispositif DI‑TS,
+                  Depuis maintenant deux ans, j’exerce au sein d’un dispositif DITSA,
                   où j’approfondis mon expertise dans l’accompagnement des situations
                   complexes et la coordination des parcours. En parallèle, je continue
                   de me former régulièrement afin d’actualiser mes connaissances et
                   d’affiner mes outils d’évaluation et d’intervention.
                 </p>
+                <p>
+                  Aujourd’hui, je développe une activité libérale en complément de mon
+                  engagement au DITSA : elle prolonge cette pratique tout en me
+                  permettant d’offrir un accompagnement aux familles dès la précoce.
+                </p>
+                <p>
+                  Mon objectif est de faciliter votre parcours en apportant des repères
+                  en amont, une compréhension du fonctionnement de votre enfant et des
+                  pistes concrètes à mettre en place au quotidien.
+                </p>
               </div>
             </div>
           </section>
 
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
-            <div className={`p-8 ${surfaceCardBlush}`}>
+          <div className="mt-12 grid gap-4 md:grid-cols-2 md:items-stretch">
+            <div className={`flex h-full min-h-0 flex-col p-8 ${surfaceCardBlush}`}>
               <div className="font-semibold tracking-tight">Mon activité</div>
-              <p className="mt-3 text-sm leading-7 text-black/70">
+              <p className="mt-3 text-justify hyphens-auto text-sm leading-7 text-black/70">
                 En libéral, je propose des temps d’échange, des évaluations et un
                 accompagnement structuré, à domicile dans le Puy‑de‑Dôme (63) ou
                 en visio (partout en France).
               </p>
             </div>
-            <div className={`p-8 ${surfaceCardSage}`}>
+            <div className={`flex h-full min-h-0 flex-col p-8 ${surfaceCardSage}`}>
               <div className="font-semibold tracking-tight">Mon approche</div>
-              <p className="mt-3 text-sm leading-7 text-black/70">
+              <p className="mt-3 text-justify hyphens-auto text-sm leading-7 text-black/70">
                 Je m’appuie sur des outils standardisés et les recommandations
                 de bonnes pratiques (HAS) pour proposer des bilans fiables et
                 utiles, et orienter vers les professionnels adaptés si besoin.
+                Mon accompagnement inclut également une approche développementale
+                et comportementale, aujourd’hui recommandée en priorité.
               </p>
             </div>
           </div>

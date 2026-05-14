@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Container } from "@/components/Container";
 import {
@@ -6,16 +7,14 @@ import {
   surfaceCardSage,
 } from "@/lib/surfaceStyles";
 
-/** Pastille plus petite que le hero : même esprit monochrome, charge visuelle réduite */
+/** Pastille plus petite que le hero : même style que les cartes du bandeau */
 function JourneyEmojiBadge({ emoji }: { emoji: string }) {
   return (
     <div
       className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-black/[0.07] bg-gradient-to-b from-white to-zinc-100/85 shadow-[inset_0_1px_2px_rgba(255,255,255,0.96),0_2px_6px_rgba(31,41,51,0.055)] ring-1 ring-white/65"
       aria-hidden
     >
-      <span className="text-[1.28rem] leading-none grayscale opacity-[0.92] contrast-[1.03]">
-        {emoji}
-      </span>
+      <span className="text-[1.28rem] leading-none">{emoji}</span>
     </div>
   );
 }
@@ -60,8 +59,24 @@ export default function Home() {
         <div className="absolute inset-x-0 top-[360px] -z-10 h-24 bg-[radial-gradient(closest-side,rgba(255,255,255,.85),transparent)]" />
 
         <Container>
-          <div className="py-14 md:py-20">
-            <div className="mx-auto max-w-3xl text-center">
+          <div className="relative py-14 md:py-20">
+            <div
+              className="pointer-events-none absolute inset-0 z-0 flex items-start justify-center overflow-hidden pt-2 opacity-[0.1] sm:pt-4 sm:opacity-[0.12] md:pt-6 md:opacity-[0.14]"
+              aria-hidden
+            >
+              <Image
+                src="/logo-libellules-transparent.png"
+                alt=""
+                width={880}
+                height={560}
+                className="max-h-[min(42vh,400px)] w-auto max-w-[min(94vw,38rem)] translate-y-[6%] rotate-[-6deg] object-contain sm:max-h-[min(46vh,440px)] sm:max-w-[40rem] md:translate-y-[8%]"
+                unoptimized
+                priority
+              />
+            </div>
+
+            <div className="relative z-10">
+              <div className="mx-auto max-w-3xl text-center">
               <p className="text-sm font-semibold tracking-wide text-black/60">
                 Clermont‑Ferrand · Puy‑de‑Dôme (63) · Visio possible
               </p>
@@ -71,10 +86,7 @@ export default function Home() {
               <p className="mt-5 text-lg leading-8 text-black/70 md:text-xl">
                 Repérage précoce des signes du trouble du spectre de l’autisme
                 (TSA), bilans (Vineland II, profil sensoriel — Dunn) et pistes
-                concrètes pour mieux accompagner votre enfant.
-              </p>
-              <p className="mt-3 text-sm text-black/55">
-                Cela ne constitue pas un diagnostic.
+                concrètes pour mieux accompagner votre enfant de 0 à 6 ans.
               </p>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -85,7 +97,7 @@ export default function Home() {
                   Découvrir les bilans
                 </ButtonLink>
               </div>
-            </div>
+              </div>
 
             <div className="mt-12 grid gap-5 md:grid-cols-3">
               {[
@@ -111,7 +123,7 @@ export default function Home() {
                       className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-black/[0.08] bg-gradient-to-b from-white to-zinc-50/90 shadow-[inset_0_2px_4px_rgba(255,255,255,0.95),0_4px_12px_rgba(31,41,51,0.1),0_1px_2px_rgba(31,41,51,0.06)] ring-1 ring-white/80"
                       aria-hidden
                     >
-                      <span className="text-[1.65rem] leading-none grayscale contrast-[1.05]">
+                      <span className="text-[1.65rem] leading-none">
                         {card.emoji}
                       </span>
                     </div>
@@ -126,6 +138,7 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </Container>
@@ -186,7 +199,16 @@ export default function Home() {
               des outils d’évaluation standardisés afin de proposer des bilans
               utiles pour la suite du parcours. L’objectif est de mieux
               comprendre le fonctionnement de votre enfant et de vous orienter
-              dans les prochaines étapes, si nécessaire.
+              dans les prochaines étapes, si nécessaire&nbsp;:{" "}
+              <a
+                href="https://www.has-sante.fr/jcms/p_3448980/fr/trouble-du-spectre-de-l-autisme-interventions-et-parcours-de-vie-du-nourrisson-de-l-enfant-et-de-l-adolescent"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Trouble du spectre de l’autisme : interventions et parcours de vie — HAS (nouvel onglet)"
+                className="font-medium text-[var(--sage)] underline decoration-black/25 underline-offset-[3px] transition-colors hover:text-[var(--fg)] hover:decoration-[var(--sage)]/80"
+              >
+                Haute Autorité de Santé — TSA
+              </a>.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink

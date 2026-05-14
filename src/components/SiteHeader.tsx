@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, useSyncExternalStore } from "react";
@@ -86,8 +87,16 @@ export function SiteHeader() {
                 : "border-black/[0.12] bg-white/50 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_1px_3px_rgba(0,0,0,0.05)] hover:border-black/[0.18] hover:bg-zinc-200/80 hover:shadow-[inset_0_1px_0_rgba(255,255,255,1),0_2px_10px_rgba(0,0,0,0.07)]",
             ].join(" ")}
           >
-            <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-[var(--sage-soft)] text-[var(--sage)] ring-1 ring-black/[0.06] shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]">
-              <span className="font-semibold tracking-tight">EL</span>
+            <div className="flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-transparent p-0.5 ring-1 ring-black/[0.06] shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]">
+              <Image
+                src="/logo-libellules-transparent.png"
+                alt="Logo libellules"
+                width={80}
+                height={80}
+                className="max-h-full max-w-full object-contain"
+                priority
+                unoptimized
+              />
             </div>
             <div className="min-w-0 leading-tight">
               <div className="font-semibold tracking-tight text-[var(--fg)]">
