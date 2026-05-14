@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container";
-import { ButtonLink } from "@/components/ButtonLink";
-import {
-  surfaceCard,
-  surfaceCardMist,
-  surfaceCardSage,
-} from "@/lib/surfaceStyles";
+import { surfaceCard, surfaceCardBlush, surfaceCardMist } from "@/lib/surfaceStyles";
 
 export const metadata: Metadata = {
   title: "Bilans",
   description:
-    "Bilans et repérage : Vineland II et profil sensoriel (Dunn). Déroulé, objectifs et restitution.",
+    "Bilans et repérage : Vineland II et profil sensoriel (Dunn 2), objectifs et restitution.",
 };
 
 const cards = [
@@ -23,7 +18,7 @@ const cards = [
   },
   {
     href: "/bilans/profil-sensoriel",
-    title: "Profil sensoriel (Dunn)",
+    title: "Profil sensoriel (Dunn 2)",
     text: "Mieux comprendre comment votre enfant perçoit et réagit aux stimulations (bruit, lumière, toucher…).",
     tone: "mist",
   },
@@ -31,13 +26,14 @@ const cards = [
     href: "/bilans/outils",
     title: "Outils & supports",
     text: "Une galerie d’illustrations des supports et outils utilisés lors des bilans et de l’accompagnement.",
-    tone: "white",
+    tone: "blush",
   },
 ] as const;
 
 const surfaceByTone = {
   white: surfaceCard,
   mist: surfaceCardMist,
+  blush: surfaceCardBlush,
 } as const;
 
 export default function BilansPage() {
@@ -54,12 +50,19 @@ export default function BilansPage() {
             pistes concrètes adaptées. Cela ne constitue pas un diagnostic.
           </p>
 
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {cards.map((c) => (
+          <div className="mt-10 grid justify-items-stretch gap-4 md:grid-cols-2">
+            {cards.map((c, i) => (
               <Link
                 key={c.href}
                 href={c.href}
-                className={`block ${surfaceByTone[c.tone]} p-8`}
+                className={[
+                  `block ${surfaceByTone[c.tone]} p-8`,
+                  i === 2
+                    ? "md:col-span-2 md:w-full md:max-w-md md:justify-self-center"
+                    : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
               >
                 <div className="flex items-center justify-between gap-3">
                   <div className="font-semibold tracking-tight">{c.title}</div>
@@ -72,40 +75,6 @@ export default function BilansPage() {
                 </div>
               </Link>
             ))}
-          </div>
-
-          <div className={`mt-14 p-10 ${surfaceCardSage}`}>
-            <h2 className="font-[family-name:var(--font-serif)] text-2xl tracking-tight">
-              Déroulé
-            </h2>
-            <ol className="mt-5 grid gap-4 md:grid-cols-3">
-              {[
-                {
-                  title: "1. Premier échange",
-                  text: "Faire le point sur votre situation, vos questions et vos attentes.",
-                },
-                {
-                  title: "2. Recueil & passation",
-                  text: "Recueil des informations, outils adaptés aux besoins, observations si nécessaire.",
-                },
-                {
-                  title: "3. Analyse & restitution",
-                  text: "Synthèse, explications claires, recommandations concrètes et orientation si besoin.",
-                },
-              ].map((step) => (
-                <li key={step.title} className={`${surfaceCard} p-6`}>
-                  <div className="font-semibold">{step.title}</div>
-                  <div className="mt-2 text-sm leading-6 text-black/70">
-                    {step.text}
-                  </div>
-                </li>
-              ))}
-            </ol>
-            <div className="mt-8">
-              <ButtonLink href="/contact" variant="primary">
-                Me contacter
-              </ButtonLink>
-            </div>
           </div>
         </div>
       </div>

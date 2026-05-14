@@ -3,9 +3,9 @@ import { Container } from "@/components/Container";
 import { ButtonLink } from "@/components/ButtonLink";
 
 export const metadata: Metadata = {
-  title: "Profil sensoriel (Dunn)",
+  title: "Profil sensoriel (Dunn 2)",
   description:
-    "Profil sensoriel (Dunn) : mieux comprendre la perception sensorielle et les réactions de l’enfant aux stimulations du quotidien.",
+    "Profil sensoriel (Dunn 2) : mieux comprendre la perception sensorielle et les réactions de l’enfant aux stimulations du quotidien.",
 };
 
 export default function ProfilSensorielPage() {
@@ -14,7 +14,7 @@ export default function ProfilSensorielPage() {
       <div className="py-14 md:py-20">
         <div className="mx-auto max-w-3xl">
           <h1 className="font-[family-name:var(--font-serif)] text-4xl tracking-tight">
-            Profil sensoriel (Dunn), c’est quoi ?
+            Profil sensoriel (Dunn 2), c’est quoi ?
           </h1>
           <p className="mt-6 text-base leading-8 text-black/70">
             Le profil sensoriel de Dunn est un outil qui permet de mieux

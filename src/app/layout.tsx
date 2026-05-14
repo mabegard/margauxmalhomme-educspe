@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Margaux Malhomme",
   },
   description:
-    "Éducatrice spécialisée à Clermont‑Ferrand (Puy‑de‑Dôme). Repérage précoce des signes du TSA, bilans (Vineland II, profil sensoriel Dunn) et pistes concrètes adaptées.",
+    "Éducatrice spécialisée à Clermont‑Ferrand (Puy‑de‑Dôme). Repérage précoce des signes du TSA, bilans (Vineland II, profil sensoriel Dunn 2) et pistes concrètes adaptées.",
   metadataBase: new URL("https://margauxmalhomme-educspe.fr"),
 };
 
