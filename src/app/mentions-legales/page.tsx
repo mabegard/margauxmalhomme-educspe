@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
@@ -45,11 +46,21 @@ export default function MentionsLegalesPage() {
             </section>
 
             <section>
-              <h2 className="font-semibold text-black/85">Responsabilité</h2>
+              <h2 className="font-semibold text-black/85">Documents associés</h2>
               <p className="mt-2">
-                Les informations diffusées sur ce site sont fournies à titre
-                informatif. Elles ne remplacent pas un avis médical et ne
-                constituent pas un diagnostic.
+                <Link
+                  className="font-semibold text-[var(--sage)] hover:underline"
+                  href="/politique-de-confidentialite"
+                >
+                  Politique de confidentialité
+                </Link>
+                {" · "}
+                <Link
+                  className="font-semibold text-[var(--sage)] hover:underline"
+                  href="/cgu"
+                >
+                  Conditions générales d’utilisation
+                </Link>
               </p>
             </section>
           </div>

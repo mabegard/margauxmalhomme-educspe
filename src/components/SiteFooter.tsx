@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AnalyticsPreferencesLink } from "@/components/AnalyticsPreferencesLink";
 import { Container } from "@/components/Container";
 import { InstagramIcon } from "@/components/InstagramIcon";
 import { LinkedInIcon } from "@/components/LinkedInIcon";
@@ -81,6 +82,13 @@ export function SiteFooter() {
               >
                 Politique de confidentialité
               </Link>
+              <Link
+                className="w-fit text-[var(--sage-soft)] transition-colors hover:text-white hover:underline"
+                href="/cgu"
+              >
+                Conditions générales d’utilisation
+              </Link>
+              <AnalyticsPreferencesLink />
             </div>
           </div>
         </div>

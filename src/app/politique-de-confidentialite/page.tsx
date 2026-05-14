@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
@@ -60,11 +61,75 @@ export default function PolitiqueConfidentialitePage() {
               </p>
             </section>
 
+            <section id="mesure-audience">
+              <h2 className="font-semibold text-black/85">
+                Mesure d’audience (volontaire)
+              </h2>
+              <p className="mt-2">
+                Si vous acceptez via le bandeau affiché lors de votre première
+                visite, un script de l’outil{" "}
+                <a
+                  className="font-semibold text-[var(--sage)] hover:underline"
+                  href="https://plausible.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Plausible Analytics
+                </a>{" "}
+                est chargé. Il permet de connaître des statistiques agrégées
+                (pages consultées, provenance générale du trafic, type
+                d’appareil), sans publicité ni profilage marketing. Le script
+                n’est jamais chargé sans votre accord préalable.
+              </p>
+              <p className="mt-2">
+                Votre choix (accepter ou refuser) est enregistré dans le stockage
+                local de votre navigateur ; vous pouvez le modifier à tout moment
+                via le lien « Modifier le choix statistiques » en pied de page
+                (la page se recharge alors pour appliquer votre nouveau choix).
+              </p>
+              <p className="mt-2">
+                Politique de confidentialité de l’éditeur de l’outil :{" "}
+                <a
+                  className="font-semibold text-[var(--sage)] hover:underline"
+                  href="https://plausible.io/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  plausible.io/privacy
+                </a>
+                .
+              </p>
+            </section>
+
             <section>
               <h2 className="font-semibold text-black/85">Cookies</h2>
               <p className="mt-2">
-                Ce site n’utilise pas de cookies publicitaires. (À ajuster si
-                vous ajoutez des outils de mesure d’audience.)
+                Ce site ne dépose pas de cookies publicitaires. La mesure
+                d’audience décrite ci‑dessus repose sur un script chargé
+                uniquement après consentement ; Plausible ne vise pas la
+                publicité comportementale.
+              </p>
+              <p className="mt-2">
+                Des cookies ou traceurs strictement nécessaires au
+                fonctionnement du site ou à l’hébergement peuvent toutefois être
+                utilisés par l’hébergeur, sans finalité marketing.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-semibold text-black/85">
+                Conditions d’utilisation du site
+              </h2>
+              <p className="mt-2">
+                L’accès et la navigation sur ce site sont également encadrés par
+                les{" "}
+                <Link
+                  className="font-semibold text-[var(--sage)] hover:underline"
+                  href="/cgu"
+                >
+                  conditions générales d’utilisation
+                </Link>
+                .
               </p>
             </section>
           </div>

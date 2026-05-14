@@ -4,9 +4,12 @@ import "./globals.css";
 import { MobileContactFab } from "@/components/MobileContactFab";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { AudienceAnalytics } from "@/components/AudienceAnalytics";
 
 const inter = Inter({ variable: "--font-sans", subsets: ["latin"] });
 const fraunces = Fraunces({ variable: "--font-serif", subsets: ["latin"] });
+
+const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN ?? "";
 
 export const metadata: Metadata = {
   title: {
@@ -32,6 +35,9 @@ export default function RootLayout({
         <SiteHeader />
         <main className="flex-1 pb-[7.25rem] md:pb-0">{children}</main>
         <MobileContactFab />
+        {plausibleDomain ? (
+          <AudienceAnalytics domain={plausibleDomain} />
+        ) : null}
         <SiteFooter />
       </body>
     </html>

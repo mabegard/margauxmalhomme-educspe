@@ -49,6 +49,13 @@ export default function BilansPage() {
             identifier ses besoins et ses points d’appui, et vous proposer des
             pistes concrètes adaptées. Cela ne constitue pas un diagnostic.
           </p>
+          <p className="mt-5 text-base leading-8 text-black/70">
+            Les bilans peuvent servir de base pour&nbsp;:
+          </p>
+          <ul className="mt-2 list-inside list-disc space-y-2 pl-1 text-base leading-8 text-black/70">
+            <li>appuyer un futur diagnostic&nbsp;;</li>
+            <li>accompagner un dossier MDPH.</li>
+          </ul>
 
           <div className="mt-10 grid justify-items-stretch gap-4 md:grid-cols-2">
             {cards.map((c, i) => (
