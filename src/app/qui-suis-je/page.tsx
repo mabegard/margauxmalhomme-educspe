@@ -139,7 +139,7 @@ export default function QuiSuisJePage() {
                 <p>
                   Aujourd’hui, je développe une activité libérale en complément de mon
                   engagement au DITSA : elle prolonge cette pratique tout en me
-                  permettant d’offrir un accompagnement aux familles dès la précoce.
+                  permettant d’offrir un accompagnement précoce.
                 </p>
                 <p>
                   Mon objectif est de faciliter votre parcours en apportant des repères

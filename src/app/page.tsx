@@ -80,8 +80,17 @@ export default function Home() {
               <p className="text-sm font-semibold tracking-wide text-black/60">
                 Clermont‑Ferrand · Puy‑de‑Dôme (63) · Visio possible
               </p>
-              <h1 className="mt-4 font-[family-name:var(--font-serif)] text-4xl leading-[1.05] tracking-tight text-[var(--fg)] md:text-6xl">
-                Éducatrice spécialisée à Clermont‑Ferrand
+              <h1 className="mt-4 font-[family-name:var(--font-serif)] text-4xl leading-[1.1] tracking-tight text-[var(--fg)] md:text-6xl">
+                <span className="block">Margaux Malhomme</span>
+                <span className="mt-1 block text-2xl leading-tight whitespace-nowrap md:mt-2 md:text-4xl">
+                  Éducatrice spécialisée libérale
+                </span>
+                <span className="mt-1 block md:mt-2">
+                  TND
+                  <span className="mt-1 block font-[family-name:var(--font-sans)] text-sm font-normal tracking-normal text-black/55 md:text-base">
+                    Troubles du neurodéveloppement
+                  </span>
+                </span>
               </h1>
               <p className="mt-5 text-lg leading-8 text-black/70 md:text-xl">
                 Repérage précoce des signes du trouble du spectre de l’autisme
