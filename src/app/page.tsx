@@ -95,7 +95,7 @@ export default function Home() {
               <p className="mt-5 text-lg leading-8 text-black/70 md:text-xl">
                 Repérage précoce des signes du trouble du spectre de l’autisme
                 (TSA), bilans (Vineland II, profil sensoriel — Dunn 2) et pistes
-                concrètes pour mieux accompagner votre enfant de 0 à 6 ans.
+                concrètes pour mieux accompagner votre enfant.
               </p>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
