@@ -1,11 +1,41 @@
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Container } from "@/components/Container";
+import { contactMailtoHref } from "@/lib/contact";
 import {
   surfaceCard,
   surfaceCardBlush,
   surfaceCardSage,
 } from "@/lib/surfaceStyles";
+
+const PORTRAIT_SRC = "/portraits/portrait-juin-26.png";
+
+function HeroPortrait() {
+  return (
+    <figure className="mx-auto w-full max-w-[220px] sm:max-w-[260px] md:mx-0 md:max-w-[280px] lg:max-w-[300px]">
+      <div className="rounded-3xl border border-white/90 bg-white/90 p-2 shadow-[0_10px_40px_-12px_rgba(31,41,51,0.16),0_4px_14px_-6px_rgba(31,41,51,0.07),inset_0_1px_0_rgba(255,255,255,0.95)] ring-1 ring-black/[0.06]">
+        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
+          <Image
+            src={PORTRAIT_SRC}
+            alt="Margaux Malhomme, éducatrice spécialisée à Clermont‑Ferrand"
+            fill
+            sizes="(max-width: 768px) 260px, 300px"
+            className="object-cover object-center"
+            priority
+            unoptimized
+          />
+          <div
+            className="pointer-events-none absolute inset-0 mix-blend-soft-light"
+            style={{
+              background:
+                "linear-gradient(165deg, rgba(255,252,248,0.28) 0%, transparent 50%, rgba(47,107,87,0.08) 100%)",
+            }}
+          />
+        </div>
+      </div>
+    </figure>
+  );
+}
 
 /** Pastille plus petite que le hero : même style que les cartes du bandeau */
 function JourneyEmojiBadge({ emoji }: { emoji: string }) {
@@ -55,11 +85,11 @@ export default function Home() {
     <div className="bg-[var(--bg)]">
       {/* Chevauche le header sticky : fond visible sous le « verre » sans photo */}
       <section className="relative -mt-[5.25rem] overflow-hidden pt-[5.25rem]">
-        <div className="absolute inset-x-0 top-0 -z-10 h-[420px] bg-[var(--sage-soft)]" />
-        <div className="absolute inset-x-0 top-[360px] -z-10 h-24 bg-[radial-gradient(closest-side,rgba(255,255,255,.85),transparent)]" />
+        <div className="absolute inset-x-0 top-0 -z-10 h-[min(92vh,720px)] bg-[var(--sage-soft)] md:h-[680px]" />
+        <div className="absolute inset-x-0 top-[min(80vh,600px)] -z-10 h-32 bg-[radial-gradient(closest-side,rgba(255,255,255,.9),transparent)] md:top-[620px]" />
 
         <Container>
-          <div className="relative py-14 md:py-20">
+          <div className="relative py-16 md:py-24">
             <div
               className="pointer-events-none absolute inset-0 z-0 flex items-start justify-center overflow-hidden pt-2 opacity-[0.1] sm:pt-4 sm:opacity-[0.12] md:pt-6 md:opacity-[0.14]"
               aria-hidden
@@ -76,39 +106,41 @@ export default function Home() {
             </div>
 
             <div className="relative z-10">
-              <div className="mx-auto max-w-3xl text-center">
-              <p className="text-sm font-semibold tracking-wide text-black/60">
+              <p className="text-center text-sm font-semibold tracking-wide text-black/60">
                 Clermont‑Ferrand · Puy‑de‑Dôme (63) · Visio possible
               </p>
-              <h1 className="mt-4 font-[family-name:var(--font-serif)] text-4xl leading-[1.1] tracking-tight text-[var(--fg)] md:text-6xl">
-                <span className="block">Margaux Malhomme</span>
-                <span className="mt-1 block text-2xl leading-tight whitespace-nowrap md:mt-2 md:text-4xl">
-                  Éducatrice spécialisée libérale
-                </span>
-                <span className="mt-1 block md:mt-2">
-                  TND
-                  <span className="mt-1 block font-[family-name:var(--font-sans)] text-sm font-normal tracking-normal text-black/55 md:text-base">
-                    Troubles du neurodéveloppement
-                  </span>
-                </span>
-              </h1>
-              <p className="mt-5 text-lg leading-8 text-black/70 md:text-xl">
-                Repérage précoce des signes du trouble du spectre de l’autisme
-                (TSA), bilans (Vineland II, profil sensoriel — Dunn 2) et pistes
-                concrètes pour mieux accompagner votre enfant.
-              </p>
 
-              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <ButtonLink variant="primary" href="/contact">
-                  Me contacter
-                </ButtonLink>
-                <ButtonLink variant="secondary" href="/bilans">
-                  Découvrir les bilans
-                </ButtonLink>
-              </div>
+              <div className="mx-auto mt-8 grid max-w-5xl items-center gap-10 md:mt-10 md:grid-cols-[minmax(0,280px)_1fr] md:gap-12 md:gap-x-14 lg:grid-cols-[minmax(0,300px)_1fr] lg:gap-x-16">
+                <HeroPortrait />
+
+                <div className="text-center md:text-left">
+                  <h1 className="font-[family-name:var(--font-serif)] text-4xl leading-[1.15] tracking-tight text-[var(--fg)] md:text-5xl lg:text-6xl">
+                    <span className="block">Margaux Malhomme</span>
+                    <span className="mt-3 block text-xl leading-snug md:mt-4 md:text-2xl lg:text-3xl">
+                      Éducatrice spécialisée libérale{" "}
+                      <span className="text-lg font-normal text-black/70 lg:text-2xl">
+                        TND / TSA
+                      </span>
+                    </span>
+                  </h1>
+                  <p className="mt-6 max-w-xl text-base leading-8 text-black/70 md:mt-7 md:text-lg md:leading-9">
+                    Repérage précoce des signes du trouble du spectre de
+                    l’autisme, observations, bilans standardisés, accompagnement
+                    éducatif, temps de répit ponctuel et pistes concrètes.
+                  </p>
+
+                  <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row md:justify-start">
+                    <ButtonLink variant="primary" href="/contact">
+                      Me contacter
+                    </ButtonLink>
+                    <ButtonLink variant="secondary" href="/bilans">
+                      Découvrir les bilans
+                    </ButtonLink>
+                  </div>
+                </div>
               </div>
 
-            <div className="mt-12 grid gap-5 md:grid-cols-3">
+            <div className="mt-16 grid gap-6 md:grid-cols-3 md:gap-8">
               {[
                 {
                   emoji: "🤝",
@@ -153,12 +185,12 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="py-14 md:py-20">
+      <section className="py-16 md:py-24">
         <Container>
           <h2 className="mx-auto max-w-3xl text-center font-[family-name:var(--font-serif)] text-2xl leading-snug tracking-tight text-[var(--fg)] md:text-3xl">
             Je vous propose une prise en charge personnalisée
           </h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3 md:items-stretch">
+          <div className="mt-12 grid gap-8 md:grid-cols-3 md:items-stretch md:gap-10">
             {journeySteps.map((step) => (
               <div
                 key={step.title}
@@ -196,9 +228,9 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="py-14 md:py-20">
+      <section className="py-16 md:py-24">
         <Container>
-          <div className={`p-10 ${surfaceCard}`}>
+          <div className={`p-10 md:p-12 ${surfaceCard}`}>
             <h2 className="font-[family-name:var(--font-serif)] text-3xl tracking-tight">
               Mon approche
             </h2>
@@ -222,7 +254,7 @@ export default function Home() {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink
                 variant="secondary"
-                href="mailto:educ.liberale.malhomme@gmail.com?subject=Demande%20d%27information"
+                href={contactMailtoHref()}
               >
                 Écrire un email
               </ButtonLink>

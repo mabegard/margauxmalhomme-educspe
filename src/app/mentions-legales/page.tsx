@@ -27,14 +27,25 @@ export default function MentionsLegalesPage() {
                 Email :{" "}
                 <a
                   className="font-semibold text-[var(--sage)] hover:underline"
-                  href="mailto:educ.liberale.malhomme@gmail.com"
+                  href="mailto:margauxmalhomme@gmail.com"
                 >
-                  educ.liberale.malhomme@gmail.com
+                  margauxmalhomme@gmail.com
                 </a>
               </p>
               <p className="mt-2 text-black/55">
                 (À compléter : adresse professionnelle, n° SIRET, etc. si
                 applicable.)
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-semibold text-black/85">
+                Données transmises par e-mail
+              </h2>
+              <p className="mt-2">
+                Les informations transmises par e-mail sont utilisées uniquement
+                pour répondre à votre demande de contact ou pour un éventuel
+                accompagnement.
               </p>
             </section>
 

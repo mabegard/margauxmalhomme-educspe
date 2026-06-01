@@ -39,7 +39,7 @@ const surfaceByTone = {
 export default function BilansPage() {
   return (
     <Container>
-      <div className="py-14 md:py-20">
+      <div className="pt-14 md:pt-20">
         <div className="mx-auto max-w-4xl">
           <h1 className="font-[family-name:var(--font-serif)] text-4xl tracking-tight">
             Bilans et repérage
@@ -84,6 +84,16 @@ export default function BilansPage() {
             ))}
           </div>
         </div>
+
+        <p className="mx-auto mt-14 max-w-4xl pb-6 text-base leading-8 text-black/70 md:mt-20 md:pb-8">
+          <span className="font-semibold text-[var(--fg)]">Important :</span>{" "}
+          Je ne réalise pas de diagnostic médical. Les observations et bilans
+          standardisés ont pour objectif de mieux comprendre le fonctionnement de
+          votre enfant, de repérer d’éventuels signes d’alerte et d’orienter les
+          familles vers les ressources adaptées. Ils peuvent également apporter des
+          éléments d’observation utiles au médecin traitant, au pédiatre ou à
+          l’équipe réalisant l’évaluation diagnostique.
+        </p>
       </div>
     </Container>
   );

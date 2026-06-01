@@ -53,9 +53,9 @@ export default function PolitiqueConfidentialitePage() {
                 rectification ou la suppression de vos données, en écrivant à{" "}
                 <a
                   className="font-semibold text-[var(--sage)] hover:underline"
-                  href="mailto:educ.liberale.malhomme@gmail.com"
+                  href="mailto:margauxmalhomme@gmail.com"
                 >
-                  educ.liberale.malhomme@gmail.com
+                  margauxmalhomme@gmail.com
                 </a>
                 .
               </p>

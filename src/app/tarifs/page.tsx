@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { ButtonLink } from "@/components/ButtonLink";
+import { contactMailtoHref } from "@/lib/contact";
 import {
   surfaceCardBlush,
   surfaceCardMist,
@@ -53,8 +54,18 @@ const offers = [
     title: "Accompagnement",
     price: "50 €",
     duration: { main: "1 h" },
-    text: "Un temps pour faire le point sur votre situation et répondre à vos questions.",
-    items: ["Écoute de vos besoins", "Réponses à vos questions", "Premier éclairage"],
+    text: "Accompagnement éducatif pour les enfants avec, sans ou en cours de diagnostic.",
+    items: [
+      "Autonomie dans la vie quotidienne (repas, habillage, transitions…)",
+      "Communication (C.A.A)",
+      "Interactions sociales",
+      "Gestion des comportements défis",
+      "Prise en compte des particularités sensorielles",
+      "Mise en place d’outils concrets adaptés à l’enfant",
+      "Guidance parentale",
+      "Aide à l’orientation et à la recherche de professionnels spécialisés adaptés aux besoins de votre enfant",
+      "Répit ponctuel",
+    ],
     tone: "blush",
   },
   {
@@ -120,7 +131,7 @@ export default function TarifsPage() {
         <div
           className="mt-8 w-full rounded-2xl border border-white/95 bg-white px-5 py-4 shadow-[0_8px_28px_-14px_rgba(31,41,51,0.12),0_2px_10px_-6px_rgba(31,41,51,0.06),inset_0_1px_0_rgba(255,255,255,1)] ring-1 ring-black/[0.05] md:rounded-3xl md:px-8 md:py-5"
           role="region"
-          aria-label="Premier échange téléphonique gratuit"
+          aria-label="Premier échange téléphonique GRATUIT"
         >
           <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-6">
             <div className="flex w-full shrink-0 flex-col items-center gap-3 sm:w-auto">
@@ -136,7 +147,7 @@ export default function TarifsPage() {
             </div>
             <div className="min-w-0 flex-1 text-left sm:pt-0.5">
               <div className="font-semibold tracking-tight text-[var(--fg)] md:text-lg">
-                Premier échange téléphonique gratuit
+                Premier échange téléphonique GRATUIT
               </div>
               <p className="mt-2 max-w-4xl text-sm leading-relaxed text-black/70 md:text-base md:leading-7">
                 Prise de contact par téléphone, jusqu’à 30 minutes, pour faire
@@ -205,7 +216,7 @@ export default function TarifsPage() {
                 Appeler
               </ButtonLink>
               <ButtonLink
-                href="mailto:educ.liberale.malhomme@gmail.com?subject=Demande%20de%20rendez-vous"
+                href={contactMailtoHref("Demande de rendez-vous")}
                 variant="secondary"
               >
                 Envoyer un email

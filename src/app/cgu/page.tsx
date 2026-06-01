@@ -88,9 +88,9 @@ export default function CguPage() {
                 Pour toute question relative aux présentes CGU :{" "}
                 <a
                   className="font-semibold text-[var(--sage)] hover:underline"
-                  href="mailto:educ.liberale.malhomme@gmail.com"
+                  href="mailto:margauxmalhomme@gmail.com"
                 >
-                  educ.liberale.malhomme@gmail.com
+                  margauxmalhomme@gmail.com
                 </a>
                 .
               </p>

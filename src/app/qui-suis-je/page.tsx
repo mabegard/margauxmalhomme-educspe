@@ -16,8 +16,7 @@ export const metadata: Metadata = {
     "Présentation de Margaux Malhomme, éducatrice spécialisée à Clermont‑Ferrand (63) : parcours, valeurs et approche.",
 };
 
-/** Déposez votre portrait ici : public/portraits/margaux-malhomme.jpg (photo nette, sans légende fichier). */
-const PORTRAIT_SRC = "/portraits/margaux-malhomme%202.jpg";
+const PORTRAIT_SRC = "/portraits/portrait-juin-26.png";
 const INSTAGRAM_URL = "https://www.instagram.com/boost.educ/";
 const LINKEDIN_URL = "https://fr.linkedin.com/in/margaux-malhomme-2548141ba";
 
@@ -41,12 +40,9 @@ export default function QuiSuisJePage() {
                         alt="Margaux Malhomme, éducatrice spécialisée à Clermont‑Ferrand"
                         fill
                         sizes="(max-width: 768px) min(280px, 100vw), 320px"
-                        className="object-cover object-[center_15%]"
-                        style={{
-                          filter:
-                            "brightness(1.03) contrast(1.10) saturate(0.95) sepia(0.06) hue-rotate(2deg)",
-                        }}
+                        className="object-cover object-center"
                         priority
+                        unoptimized
                       />
                       {/* Traitement type portrait pro : chaleur douce + léger voile sauge */}
                       <div

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AnalyticsPreferencesLink } from "@/components/AnalyticsPreferencesLink";
 import { Container } from "@/components/Container";
+import { CONTACT_EMAIL, contactMailtoHref } from "@/lib/contact";
 import { InstagramIcon } from "@/components/InstagramIcon";
 import { LinkedInIcon } from "@/components/LinkedInIcon";
 
@@ -57,9 +58,9 @@ export function SiteFooter() {
               </a>
               <a
                 className="break-all text-[var(--sage-soft)] transition-colors hover:text-white hover:underline"
-                href="mailto:educ.liberale.malhomme@gmail.com"
+                href={contactMailtoHref()}
               >
-                educ.liberale.malhomme@gmail.com
+                {CONTACT_EMAIL}
               </a>
               <div style={{ color: "var(--footer-muted)" }}>
                 À domicile (Puy‑de‑Dôme) ou en visio (France)
@@ -98,6 +99,7 @@ export function SiteFooter() {
           style={{ color: "var(--footer-faint)" }}
         >
           <div>© {new Date().getFullYear()} Margaux Malhomme — Tous droits réservés.</div>
+          <div className="mt-1">SIREN&nbsp;: 105&nbsp;121&nbsp;495</div>
           <div className="mt-2 text-center text-[11px] opacity-70">
             Propulsé par Beg&apos;s Project
           </div>

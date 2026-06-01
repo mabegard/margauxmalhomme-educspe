@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
+import { contactMailtoHref } from "@/lib/contact";
 import {
   surfaceCard,
   surfaceCardMist,
@@ -39,12 +40,12 @@ export default function ContactPage() {
 
             <a
               className={`flex items-center justify-between p-6 ${surfaceCard}`}
-              href="mailto:educ.liberale.malhomme@gmail.com?subject=Demande%20d%27information"
+              href={contactMailtoHref()}
             >
               <div>
                 <div className="font-semibold tracking-tight">Envoyer un email</div>
                 <div className="mt-1 text-sm text-black/65">
-                  educ.liberale.malhomme@gmail.com
+                  margauxmalhomme@gmail.com
                 </div>
               </div>
               <span className="text-sm text-black/50">Mail →</span>
