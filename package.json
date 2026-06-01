@@ -6,7 +6,8 @@
     "dev": "WATCHPACK_POLLING=true WATCHPACK_POLLING_INTERVAL=1000 next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "commit:safe": "bash scripts/safe-commit.sh"
   },
   "dependencies": {
     "next": "16.2.6",
