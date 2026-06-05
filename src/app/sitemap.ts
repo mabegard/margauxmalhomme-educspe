@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/bilans",
     "/bilans/vineland",
     "/bilans/profil-sensoriel",
+    "/bilans/outils",
     "/tarifs",
     "/contact",
     "/mentions-legales",

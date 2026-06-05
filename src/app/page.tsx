@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Container } from "@/components/Container";
@@ -7,6 +8,16 @@ import {
   surfaceCardBlush,
   surfaceCardSage,
 } from "@/lib/surfaceStyles";
+import { DEFAULT_DESCRIPTION } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      "Éducatrice spécialisée à Clermont-Ferrand (63) | Margaux Malhomme — TND / TSA",
+  },
+  description: DEFAULT_DESCRIPTION,
+  alternates: { canonical: "/" },
+};
 
 const PORTRAIT_SRC = "/portraits/portrait-juin-26.png";
 
@@ -117,16 +128,17 @@ export default function Home() {
                   <h1 className="font-[family-name:var(--font-serif)] text-4xl leading-[1.15] tracking-tight text-[var(--fg)] md:text-5xl lg:text-6xl">
                     <span className="block">Margaux Malhomme</span>
                     <span className="mt-3 block text-xl leading-snug md:mt-4 md:text-2xl lg:text-3xl">
-                      Éducatrice spécialisée libérale{" "}
-                      <span className="text-lg font-normal text-black/70 lg:text-2xl">
-                        TND / TSA
-                      </span>
+                      Éducatrice spécialisée libérale à Clermont-Ferrand
+                    </span>
+                    <span className="mt-2 block text-lg font-normal text-black/70 md:text-xl lg:text-2xl">
+                      TND / TSA · Puy-de-Dôme (63)
                     </span>
                   </h1>
                   <p className="mt-6 max-w-xl text-base leading-8 text-black/70 md:mt-7 md:text-lg md:leading-9">
-                    Repérage précoce des signes du trouble du spectre de
-                    l’autisme, observations, bilans standardisés, accompagnement
-                    éducatif, temps de répit ponctuel et pistes concrètes.
+                    Professionnelle de l’éducation spécialisée à Clermont-Ferrand :
+                    repérage précoce des signes du trouble du spectre de l’autisme,
+                    observations, bilans standardisés, accompagnement éducatif, temps
+                    de répit ponctuel et pistes concrètes.
                   </p>
 
                   <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row md:justify-start">
