@@ -5,7 +5,7 @@ import { Container } from "@/components/Container";
 export const metadata: Metadata = {
   title: "Conditions générales d’utilisation",
   description:
-    "Conditions générales d’utilisation du site margauxmalhomme-educspe.fr.",
+    "Conditions générales d’utilisation du site margauxmalhomme.com.",
 };
 
 export default function CguPage() {

@@ -79,9 +79,9 @@ ${sectionTitle("Je vous contacte concernant l'enfant")}
 export function contactMailtoHref(
   subject: string = DEFAULT_CONTACT_SUBJECT,
 ): string {
-  const params = new URLSearchParams({
-    subject,
-    body: CONTACT_EMAIL_BODY,
-  });
-  return `mailto:${CONTACT_EMAIL}?${params.toString()}`;
+  const query = [
+    `subject=${encodeURIComponent(subject)}`,
+    `body=${encodeURIComponent(CONTACT_EMAIL_BODY)}`,
+  ].join("&");
+  return `mailto:${CONTACT_EMAIL}?${query}`;
 }

@@ -1,7 +1,9 @@
 import type { MetadataRoute } from "next";
 
+import { SITE_URL } from "@/lib/site";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = "https://margauxmalhomme-educspe.fr";
+  const siteUrl = SITE_URL;
   const now = new Date();
 
   const routes = [

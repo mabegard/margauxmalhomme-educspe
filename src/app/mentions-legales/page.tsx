@@ -4,7 +4,7 @@ import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Mentions légales",
-  description: "Mentions légales du site margauxmalhomme-educspe.fr.",
+  description: "Mentions légales du site margauxmalhomme.com.",
 };
 
 export default function MentionsLegalesPage() {

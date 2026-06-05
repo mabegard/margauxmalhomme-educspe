@@ -4,7 +4,7 @@ import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
-  description: "Politique de confidentialité du site margauxmalhomme-educspe.fr.",
+  description: "Politique de confidentialité du site margauxmalhomme.com.",
 };
 
 export default function PolitiqueConfidentialitePage() {

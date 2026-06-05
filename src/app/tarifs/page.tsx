@@ -52,7 +52,7 @@ const offers = [
   {
     emoji: "💬",
     title: "Accompagnement",
-    price: "50 €",
+    price: "55 €",
     duration: { main: "1 h" },
     text: "Accompagnement éducatif pour les enfants avec, sans ou en cours de diagnostic.",
     items: [
