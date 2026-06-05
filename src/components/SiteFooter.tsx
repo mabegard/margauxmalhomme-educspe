@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AnalyticsPreferencesLink } from "@/components/AnalyticsPreferencesLink";
 import { Container } from "@/components/Container";
+import { MailtoLink } from "@/components/MailtoLink";
 import { CONTACT_EMAIL, contactMailtoHref } from "@/lib/contact";
 import { InstagramIcon } from "@/components/InstagramIcon";
 import { LinkedInIcon } from "@/components/LinkedInIcon";
@@ -56,12 +57,12 @@ export function SiteFooter() {
               >
                 07 77 00 53 82
               </a>
-              <a
+              <MailtoLink
                 className="break-all text-[var(--sage-soft)] transition-colors hover:text-white hover:underline"
                 href={contactMailtoHref()}
               >
                 {CONTACT_EMAIL}
-              </a>
+              </MailtoLink>
               <div style={{ color: "var(--footer-muted)" }}>
                 À domicile (Puy‑de‑Dôme) ou en visio (France)
               </div>

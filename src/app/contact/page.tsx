@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
+import { MailtoLink } from "@/components/MailtoLink";
 import { contactMailtoHref } from "@/lib/contact";
 import {
   surfaceCard,
@@ -38,7 +39,7 @@ export default function ContactPage() {
               <span className="text-sm text-black/50">Tel →</span>
             </a>
 
-            <a
+            <MailtoLink
               className={`flex items-center justify-between p-6 ${surfaceCard}`}
               href={contactMailtoHref()}
             >
@@ -49,7 +50,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <span className="text-sm text-black/50">Mail →</span>
-            </a>
+            </MailtoLink>
 
             <div className={`p-6 ${surfaceCardMist}`}>
               <div className="font-semibold tracking-tight">Zone d’intervention</div>

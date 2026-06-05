@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ComponentProps } from "react";
+import { MailtoLink } from "@/components/MailtoLink";
 
 type Props = ComponentProps<typeof Link> & {
   variant?: "primary" | "secondary" | "outline";
@@ -33,10 +34,26 @@ const outlineRelief =
   "hover:shadow-[0_4px_18px_-8px_rgba(47,107,87,0.2)] " +
   "active:translate-y-px active:border-[#326b58] active:bg-[rgb(47_107_87_/0.32)] active:text-[#163529]";
 
+function isMailtoHref(href: Props["href"]): href is string {
+  return typeof href === "string" && href.startsWith("mailto:");
+}
+
+function isTelHref(href: Props["href"]): href is string {
+  return typeof href === "string" && href.startsWith("tel:");
+}
+
+function isNativeHref(href: Props["href"]): boolean {
+  return isMailtoHref(href) || isTelHref(href);
+}
+
 export function ButtonLink({
   variant = "primary",
   size = "default",
   className,
+  href,
+  prefetch,
+  replace,
+  scroll,
   ...props
 }: Props) {
   const base =
@@ -50,12 +67,26 @@ export function ButtonLink({
     outline: outlineRelief,
   };
 
+  const classes = [base, sizing, variants[variant], className]
+    .filter(Boolean)
+    .join(" ");
+
+  if (typeof href === "string" && isMailtoHref(href)) {
+    return <MailtoLink href={href} className={classes} {...props} />;
+  }
+
+  if (isNativeHref(href)) {
+    return <a href={href} className={classes} {...props} />;
+  }
+
   return (
     <Link
+      href={href}
+      prefetch={prefetch}
+      replace={replace}
+      scroll={scroll}
       {...props}
-      className={[base, sizing, variants[variant], className]
-        .filter(Boolean)
-        .join(" ")}
+      className={classes}
     />
   );
 }

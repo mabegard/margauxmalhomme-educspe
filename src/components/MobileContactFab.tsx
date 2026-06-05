@@ -1,4 +1,5 @@
 import { ButtonLink } from "@/components/ButtonLink";
+import { contactMailtoHref } from "@/lib/contact";
 
 /**
  * Pastille d’action rapide — visible uniquement sur petit écran (< md).
@@ -12,12 +13,12 @@ export function MobileContactFab() {
       <div className="pointer-events-auto mx-auto max-w-md rounded-2xl border border-black/[0.08] bg-white/93 px-3 py-3 shadow-[0_-6px_28px_rgba(31,41,51,0.09),0_12px_40px_-12px_rgba(47,107,87,0.18)] ring-1 ring-white/80 backdrop-blur-md">
         <div className="flex gap-2">
           <ButtonLink
-            href="/contact"
+            href={contactMailtoHref()}
             variant="outline"
             size="compact"
             className="min-h-[2.5rem] min-w-0 flex-1 text-center text-[0.8125rem]"
           >
-            Me contacter
+            Mail
           </ButtonLink>
           <ButtonLink
             href="tel:+33777005382"
