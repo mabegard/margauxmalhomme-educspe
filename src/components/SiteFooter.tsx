@@ -3,11 +3,9 @@ import { AnalyticsPreferencesLink } from "@/components/AnalyticsPreferencesLink"
 import { Container } from "@/components/Container";
 import { MailtoLink } from "@/components/MailtoLink";
 import { CONTACT_EMAIL, contactMailtoHref } from "@/lib/contact";
+import { INSTAGRAM_URL, LINKEDIN_URL } from "@/lib/seo";
 import { InstagramIcon } from "@/components/InstagramIcon";
 import { LinkedInIcon } from "@/components/LinkedInIcon";
-
-const INSTAGRAM_URL = "https://www.instagram.com/boost.educ/";
-const LINKEDIN_URL = "https://fr.linkedin.com/in/margaux-malhomme-2548141ba";
 
 export function SiteFooter() {
   return (
@@ -18,7 +16,7 @@ export function SiteFooter() {
       }}
     >
       <Container>
-        <div className="grid gap-8 py-10 md:grid-cols-3">
+        <div className="grid gap-8 py-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="font-semibold tracking-tight text-[var(--footer-text)]">
               Margaux Malhomme
@@ -49,8 +47,44 @@ export function SiteFooter() {
           </div>
 
           <div className="text-sm" style={{ color: "var(--footer-muted)" }}>
+            <div className="font-semibold text-[var(--footer-text)]">Prestations</div>
+            <div className="mt-2 grid gap-1">
+              <Link
+                className="w-fit text-[var(--sage-soft)] transition-colors hover:text-white hover:underline"
+                href="/bilans"
+              >
+                Bilans et repérage TSA
+              </Link>
+              <Link
+                className="w-fit text-[var(--sage-soft)] transition-colors hover:text-white hover:underline"
+                href="/tarifs"
+              >
+                Accompagnement éducatif
+              </Link>
+              <Link
+                className="w-fit text-[var(--sage-soft)] transition-colors hover:text-white hover:underline"
+                href="/tarifs"
+              >
+                Tarifs éduc spé Clermont-Ferrand
+              </Link>
+              <Link
+                className="w-fit text-[var(--sage-soft)] transition-colors hover:text-white hover:underline"
+                href="/qui-suis-je"
+              >
+                Éducatrice spécialisée — parcours
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-sm" style={{ color: "var(--footer-muted)" }}>
             <div className="font-semibold text-[var(--footer-text)]">Contact</div>
             <div className="mt-2 grid gap-1">
+              <Link
+                className="w-fit text-[var(--sage-soft)] transition-colors hover:text-white hover:underline"
+                href="/contact"
+              >
+                Me contacter
+              </Link>
               <a
                 className="text-[var(--sage-soft)] transition-colors hover:text-white hover:underline"
                 href="tel:+33777005382"

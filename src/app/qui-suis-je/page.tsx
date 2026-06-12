@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/Container";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { InstagramIcon } from "@/components/InstagramIcon";
 import { LinkedInIcon } from "@/components/LinkedInIcon";
 import {
@@ -9,27 +10,41 @@ import {
   surfaceCardMist,
   surfaceCardSage,
 } from "@/lib/surfaceStyles";
+import {
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+  pageMetadata,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Qui suis‑je ?",
-  description:
-    "Présentation de Margaux Malhomme, éducatrice spécialisée à Clermont‑Ferrand (63) : parcours, valeurs et approche.",
-};
+export const metadata: Metadata = pageMetadata(
+  "/qui-suis-je",
+  "Éducatrice spécialisée à Clermont-Ferrand — Qui suis-je ?",
+  "Margaux Malhomme, éducatrice spécialisée libérale à Clermont-Ferrand (63) : parcours, valeurs, accompagnement TSA/TND et éducation spécialisée.",
+);
 
 const PORTRAIT_SRC = "/portraits/portrait-juin-26.png";
-const INSTAGRAM_URL = "https://www.instagram.com/boost.educ/";
-const LINKEDIN_URL = "https://fr.linkedin.com/in/margaux-malhomme-2548141ba";
 
 export default function QuiSuisJePage() {
   return (
     <Container>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Accueil", path: "/" },
+          { name: "Qui suis-je ?", path: "/qui-suis-je" },
+        ]}
+      />
       <div className="py-14 md:py-20">
         <div className="mx-auto max-w-4xl">
           <section className={`p-8 md:p-10 ${surfaceCard}`}>
             <div className="grid gap-10 md:grid-cols-[minmax(0,280px)_1fr] md:items-start md:gap-12 lg:grid-cols-[minmax(0,320px)_1fr]">
               <div className="flex flex-col items-center md:items-start">
-                <h1 className="w-full max-w-[280px] text-center font-[family-name:var(--font-serif)] text-4xl tracking-tight md:max-w-[320px]">
-                  Qui suis‑je ?
+                <h1 className="w-full max-w-[280px] text-center font-[family-name:var(--font-serif)] tracking-tight md:max-w-[320px]">
+                  <span className="block text-2xl leading-snug md:text-3xl">
+                    Éducatrice spécialisée à Clermont-Ferrand
+                  </span>
+                  <span className="mt-3 block text-xl text-black/70 md:text-2xl">
+                    Qui suis‑je ?
+                  </span>
                 </h1>
 
                 <figure className="mt-10 w-full max-w-[280px] md:mt-12 md:max-w-[320px]">

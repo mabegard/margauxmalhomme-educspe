@@ -8,15 +8,18 @@ import {
   surfaceCardBlush,
   surfaceCardSage,
 } from "@/lib/surfaceStyles";
-import { DEFAULT_DESCRIPTION } from "@/lib/seo";
+import { DEFAULT_DESCRIPTION, pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
+  ...pageMetadata(
+    "/",
+    "Éducatrice spécialisée à Clermont-Ferrand (63) | Margaux Malhomme — TND / TSA",
+    DEFAULT_DESCRIPTION,
+  ),
   title: {
     absolute:
       "Éducatrice spécialisée à Clermont-Ferrand (63) | Margaux Malhomme — TND / TSA",
   },
-  description: DEFAULT_DESCRIPTION,
-  alternates: { canonical: "/" },
 };
 
 const PORTRAIT_SRC = "/portraits/portrait-juin-26.png";
@@ -274,6 +277,24 @@ export default function Home() {
                 Appeler
               </ButtonLink>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-black/[0.06] pb-16 md:pb-24">
+        <Container>
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="font-[family-name:var(--font-serif)] text-xl leading-snug tracking-tight text-[var(--fg)] md:text-2xl">
+              Éducatrice spécialisée libérale à Clermont-Ferrand et dans le
+              Puy-de-Dôme (63)
+            </h2>
+            <p className="mt-5 text-sm leading-7 text-black/65 md:text-base md:leading-8">
+              Professionnelle de l&apos;éducation spécialisée (éduc spé), j&apos;accompagne
+              les enfants et les familles à Clermont-Ferrand et dans le Puy-de-Dôme :
+              repérage TSA/TND, bilans Vineland II et profil sensoriel, accompagnement
+              éducatif et guidance parentale. Consultations à domicile, en visio ou sur
+              rendez-vous.
+            </p>
           </div>
         </Container>
       </section>

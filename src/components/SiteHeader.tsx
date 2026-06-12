@@ -8,9 +8,7 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { Container } from "@/components/Container";
 import { InstagramIcon } from "@/components/InstagramIcon";
 import { LinkedInIcon } from "@/components/LinkedInIcon";
-
-const INSTAGRAM_URL = "https://www.instagram.com/boost.educ/";
-const LINKEDIN_URL = "https://fr.linkedin.com/in/margaux-malhomme-2548141ba";
+import { INSTAGRAM_URL, LINKEDIN_URL } from "@/lib/seo";
 
 const nav = [
   { href: "/", label: "Accueil" },

@@ -1,22 +1,30 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { MailtoLink } from "@/components/MailtoLink";
 import { contactMailtoHref } from "@/lib/contact";
+import { pageMetadata } from "@/lib/seo";
 import {
   surfaceCard,
   surfaceCardMist,
   surfaceCardSage,
 } from "@/lib/surfaceStyles";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Contacter Margaux Malhomme, éducatrice spécialisée à Clermont‑Ferrand (63) : téléphone, email, informations pratiques.",
-};
+export const metadata: Metadata = pageMetadata(
+  "/contact",
+  "Contact — Éducatrice spécialisée Clermont-Ferrand (63)",
+  "Contacter Margaux Malhomme, éducatrice spécialisée libérale à Clermont-Ferrand : téléphone, email, zone d'intervention Puy-de-Dôme et visio.",
+);
 
 export default function ContactPage() {
   return (
     <Container>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Accueil", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ]}
+      />
       <div className="py-14 md:py-20">
         <div className="mx-auto max-w-3xl">
           <h1 className="font-[family-name:var(--font-serif)] text-4xl tracking-tight">

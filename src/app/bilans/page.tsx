@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
+import { pageMetadata } from "@/lib/seo";
 import { surfaceCard, surfaceCardBlush, surfaceCardMist } from "@/lib/surfaceStyles";
 
-export const metadata: Metadata = {
-  title: "Bilans",
-  description:
-    "Bilans et repérage : Vineland II et profil sensoriel (Dunn 2), objectifs et restitution.",
-};
+export const metadata: Metadata = pageMetadata(
+  "/bilans",
+  "Bilans TSA / TND — Clermont-Ferrand",
+  "Bilans et repérage TSA/TND à Clermont-Ferrand : Vineland II, profil sensoriel Dunn 2, observations et restitution pour les familles.",
+);
 
 const cards = [
   {
@@ -39,6 +41,12 @@ const surfaceByTone = {
 export default function BilansPage() {
   return (
     <Container>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Accueil", path: "/" },
+          { name: "Bilans", path: "/bilans" },
+        ]}
+      />
       <div className="pt-14 md:pt-20">
         <div className="mx-auto max-w-4xl">
           <h1 className="font-[family-name:var(--font-serif)] text-4xl tracking-tight">

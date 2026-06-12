@@ -13,6 +13,8 @@ const inter = Inter({ variable: "--font-sans", subsets: ["latin"] });
 const fraunces = Fraunces({ variable: "--font-serif", subsets: ["latin"] });
 
 const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN ?? "";
+const googleSiteVerification =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "";
 
 export const metadata: Metadata = {
   title: {
@@ -52,6 +54,9 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
+  ...(googleSiteVerification
+    ? { verification: { google: googleSiteVerification } }
+    : {}),
 };
 
 export default function RootLayout({

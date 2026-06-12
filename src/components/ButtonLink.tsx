@@ -42,8 +42,11 @@ function isTelHref(href: Props["href"]): href is string {
   return typeof href === "string" && href.startsWith("tel:");
 }
 
-function isNativeHref(href: Props["href"]): boolean {
-  return isMailtoHref(href) || isTelHref(href);
+function isNativeHref(href: Props["href"]): href is string {
+  return (
+    typeof href === "string" &&
+    (href.startsWith("mailto:") || href.startsWith("tel:"))
+  );
 }
 
 export function ButtonLink({

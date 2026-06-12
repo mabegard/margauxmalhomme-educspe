@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { ButtonLink } from "@/components/ButtonLink";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { contactMailtoHref } from "@/lib/contact";
+import { pageMetadata } from "@/lib/seo";
 import {
   surfaceCardBlush,
   surfaceCardMist,
   surfaceCardSage,
 } from "@/lib/surfaceStyles";
 
-export const metadata: Metadata = {
-  title: "Tarifs",
-  description:
-    "Tarifs : accompagnement, bilan complet (Vineland II + profil sensoriel), bilan ciblé.",
-};
+export const metadata: Metadata = pageMetadata(
+  "/tarifs",
+  "Tarifs accompagnement éducatif — Clermont-Ferrand",
+  "Tarifs éduc spé à Clermont-Ferrand : accompagnement éducatif, bilan ciblé, bilan complet Vineland II et profil sensoriel Dunn 2.",
+);
 
 function EmojiBadge({ emoji }: { emoji: string }) {
   return (
@@ -117,6 +119,12 @@ const surfaceByTone = {
 export default function TarifsPage() {
   return (
     <Container>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Accueil", path: "/" },
+          { name: "Tarifs", path: "/tarifs" },
+        ]}
+      />
       <div className="py-14 md:py-20">
         <div className="mx-auto max-w-5xl">
           <h1 className="font-[family-name:var(--font-serif)] text-4xl tracking-tight">
