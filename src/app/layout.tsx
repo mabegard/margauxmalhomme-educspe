@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { MobileContactFab } from "@/components/MobileContactFab";
@@ -78,6 +79,7 @@ export default function RootLayout({
           <AudienceAnalytics domain={plausibleDomain} />
         ) : null}
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );
