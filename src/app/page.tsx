@@ -138,8 +138,7 @@ export default function Home() {
                     </span>
                   </h1>
                   <p className="mt-6 max-w-xl text-base leading-8 text-black/70 md:mt-7 md:text-lg md:leading-9">
-                    Professionnelle de l’éducation spécialisée à Clermont-Ferrand :
-                    repérage précoce des signes du trouble du spectre de l’autisme,
+                    Repérage précoce des signes du trouble du spectre de l’autisme,
                     observations, bilans standardisés, accompagnement éducatif, temps
                     de répit ponctuel et pistes concrètes.
                   </p>
@@ -289,11 +288,10 @@ export default function Home() {
               Puy-de-Dôme (63)
             </h2>
             <p className="mt-5 text-sm leading-7 text-black/65 md:text-base md:leading-8">
-              Professionnelle de l&apos;éducation spécialisée (éduc spé), j&apos;accompagne
-              les enfants et les familles à Clermont-Ferrand et dans le Puy-de-Dôme :
-              repérage TSA/TND, bilans Vineland II et profil sensoriel, accompagnement
-              éducatif et guidance parentale. Consultations à domicile, en visio ou sur
-              rendez-vous.
+              Repérage TSA/TND, bilans Vineland II et profil sensoriel, accompagnement
+              éducatif et guidance parentale pour les enfants et les familles à
+              Clermont-Ferrand et dans le Puy-de-Dôme. Consultations à domicile, en
+              visio ou sur rendez-vous.
             </p>
           </div>
         </Container>
